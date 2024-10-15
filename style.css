@@ -49,7 +49,7 @@ input, button {
 }
 
 #new-task-input {
-    flex: 1 1 70%; /* Adjust for responsiveness */
+    flex: 1 1 60%; /* Adjusted for responsiveness */
     background-color: var(--darker);
     padding: 1rem;
     border-radius: 1rem;
@@ -68,7 +68,7 @@ input, button {
     font-weight: 700;
     cursor: pointer;
     transition: 0.4s;
-    flex: 1 1 20%; /* Adjust for responsiveness */
+    flex: 1 1 30%; /* Adjusted for responsiveness */
 }
 
 #new-task-submit:hover, #delete-all-tasks:hover {
