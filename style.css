@@ -38,7 +38,7 @@ header h1 {
 
 #new-task-form {
     display: flex;
-    flex-wrap: wrap; /* Allow form elements to wrap */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 input, button {
@@ -49,7 +49,7 @@ input, button {
 }
 
 #new-task-input {
-    flex: 1 1 100%; /* Allow input to take full width on small screens */
+    flex: 1 1 70%; /* Adjust for responsiveness */
     background-color: var(--darker);
     padding: 1rem;
     border-radius: 1rem;
@@ -66,21 +66,13 @@ input, button {
     color: var(--pink);
     font-size: 1.25rem;
     font-weight: 700;
-    background-image: linear-gradient(to right, var(--pink), var(--purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     cursor: pointer;
     transition: 0.4s;
-    flex: 1 1 100%; /* Make buttons take full width on small screens */
-    margin-top: 1rem; /* Add margin for spacing */
+    flex: 1 1 20%; /* Adjust for responsiveness */
 }
 
 #new-task-submit:hover, #delete-all-tasks:hover {
     opacity: 0.8;
-}
-
-#new-task-submit:active, #delete-all-tasks:active {
-    opacity: 0.6;
 }
 
 main {
@@ -112,51 +104,13 @@ main {
 }
 
 .task .content {
-    flex: 1 1 0%;
-}
-
-.task .content .text {
-    color: var(--light);
-    font-size: 1.125rem;
-    width: 100%;
-    display: block;
-    transition: 0.4s;
-}
-
-.task .content .text:not(:read-only) {
-    color: var(--pink);
+    flex: 1 1 70%; /* Adjust for responsiveness */
 }
 
 .task .actions {
     display: flex;
     margin: 0 -0.5rem;
-}
-
-.task .actions button {
-    cursor: pointer;
-    margin: 0 0.5rem;
-    font-size: 1.125rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: 0.4s;
-}
-
-.task .actions button:hover {
-    opacity: 0.8;
-}
-
-.task .actions button:active {
-    opacity: 0.6;
-}
-
-.task .actions .edit {
-    background-image: linear-gradient(to right, var(--pink), var(--purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.task .actions .delete {
-    color: crimson;
+    flex: 1 1 30%; /* Adjust for responsiveness */
 }
 
 /* Responsive Styles */
@@ -173,13 +127,5 @@ main {
     #new-task-submit, #delete-all-tasks {
         width: 100%; /* Make buttons full width */
         margin-top: 0; /* Remove top margin */
-    }
-    
-    .task .actions {
-        flex-direction: column; /* Stack action buttons vertically */
-    }
-    
-    .task .actions button {
-        margin: 0.5rem 0; /* Add vertical margin */
     }
 }
